@@ -24,7 +24,9 @@ class Flight
     /**
      * @var string
      *
-     * @ORM\Column(name="departure", type="string", length=32)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Terrain")
+     * @ORM\JoinColumn(nullable=false)
+     *
      */
     private $departure;
 
