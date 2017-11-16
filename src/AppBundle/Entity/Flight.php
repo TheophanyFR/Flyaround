@@ -24,7 +24,7 @@ class Flight
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Terrain")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Terrain", inversedBy="departures")
      * @ORM\JoinColumn(nullable=false)
      *
      */
@@ -344,4 +344,3 @@ class Flight
         return $this->wasDone;
     }
 }
-

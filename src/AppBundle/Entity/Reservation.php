@@ -187,4 +187,3 @@ class Reservation
         return $this->wasDone;
     }
 }
-
