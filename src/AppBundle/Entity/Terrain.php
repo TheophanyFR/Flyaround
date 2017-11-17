@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Terrain
 {
-    /* Personnal methods */
+    /* Personnal */
 
     /**
      * @return string
