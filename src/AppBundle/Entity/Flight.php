@@ -83,7 +83,7 @@ class Flight
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="flights")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="pilots")
      * @ORM\JoinColumn(nullable=false)
      */
     private $pilot;
