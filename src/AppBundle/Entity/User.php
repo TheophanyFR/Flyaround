@@ -505,4 +505,106 @@ class User
     {
         return $this->flights;
     }
+
+    /**
+     * Add pilot
+     *
+     * @param \AppBundle\Entity\Flight $pilot
+     *
+     * @return User
+     */
+    public function addPilot(\AppBundle\Entity\Flight $pilot)
+    {
+        $this->pilots[] = $pilot;
+
+        return $this;
+    }
+
+    /**
+     * Remove pilot
+     *
+     * @param \AppBundle\Entity\Flight $pilot
+     */
+    public function removePilot(\AppBundle\Entity\Flight $pilot)
+    {
+        $this->pilots->removeElement($pilot);
+    }
+
+    /**
+     * Get pilots
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPilots()
+    {
+        return $this->pilots;
+    }
+
+    /**
+     * Add reviewsAuthor
+     *
+     * @param \AppBundle\Entity\Review $reviewsAuthor
+     *
+     * @return User
+     */
+    public function addReviewsAuthor(\AppBundle\Entity\Review $reviewsAuthor)
+    {
+        $this->reviewsAuthor[] = $reviewsAuthor;
+
+        return $this;
+    }
+
+    /**
+     * Remove reviewsAuthor
+     *
+     * @param \AppBundle\Entity\Review $reviewsAuthor
+     */
+    public function removeReviewsAuthor(\AppBundle\Entity\Review $reviewsAuthor)
+    {
+        $this->reviewsAuthor->removeElement($reviewsAuthor);
+    }
+
+    /**
+     * Get reviewsAuthor
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReviewsAuthor()
+    {
+        return $this->reviewsAuthor;
+    }
+
+    /**
+     * Add usersRated
+     *
+     * @param \AppBundle\Entity\Review $usersRated
+     *
+     * @return User
+     */
+    public function addUsersRated(\AppBundle\Entity\Review $usersRated)
+    {
+        $this->usersRated[] = $usersRated;
+
+        return $this;
+    }
+
+    /**
+     * Remove usersRated
+     *
+     * @param \AppBundle\Entity\Review $usersRated
+     */
+    public function removeUsersRated(\AppBundle\Entity\Review $usersRated)
+    {
+        $this->usersRated->removeElement($usersRated);
+    }
+
+    /**
+     * Get usersRated
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsersRated()
+    {
+        return $this->usersRated;
+    }
 }
