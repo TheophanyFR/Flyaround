@@ -13,6 +13,13 @@ use Doctrine\ORM\Mapping as ORM;
 class Flight
 {
     /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="flight")
+     * @ORM\JoinColumn(nullable=false)
+     *
+     */
+    private $reservations;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -33,7 +40,8 @@ class Flight
     /**
      * @var string
      *
-     * @ORM\Column(name="arrival", type="string", length=32)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Terrain", inversedBy="arrivals")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $arrival;
 
@@ -75,14 +83,16 @@ class Flight
     /**
      * @var string
      *
-     * @ORM\Column(name="pilot", type="string", length=32)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="flights")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $pilot;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="plane", type="string", length=64)
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\PlaneModel")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $plane;
 
