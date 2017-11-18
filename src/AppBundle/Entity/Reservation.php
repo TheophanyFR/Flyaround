@@ -22,7 +22,7 @@ class Reservation
 
     /**
      * @var string
-     * 
+     *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Flight", inversedBy="reservations")
      * @ORM\JoinColumn(nullable=false)
      */

@@ -460,4 +460,38 @@ class User
     {
         return $this->reservations;
     }
+
+    /**
+     * Add flight
+     *
+     * @param \AppBundle\Entity\Flight $flight
+     *
+     * @return User
+     */
+    public function addFlight(\AppBundle\Entity\Flight $flight)
+    {
+        $this->flights[] = $flight;
+
+        return $this;
+    }
+
+    /**
+     * Remove flight
+     *
+     * @param \AppBundle\Entity\Flight $flight
+     */
+    public function removeFlight(\AppBundle\Entity\Flight $flight)
+    {
+        $this->flights->removeElement($flight);
+    }
+
+    /**
+     * Get flights
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFlights()
+    {
+        return $this->flights;
+    }
 }
