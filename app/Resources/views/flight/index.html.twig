@@ -31,8 +31,8 @@
                 <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ flight.description }}</td>
-                <td>{{ flight.pilot }}</td>
-                <td>{{ flight.plane }}</td>
+                <td>{{ flight.pilot.getFullName }}</td>
+                <td>{{ flight.plane.getModelManufacturer }}</td>
                 <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>

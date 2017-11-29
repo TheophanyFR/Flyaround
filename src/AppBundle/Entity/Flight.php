@@ -15,9 +15,9 @@ class Flight
     /**
      * @return string
      */
-    public function __toString()
+    public function getDepartureArrival()
     {
-        return $this->departure . ' - ' . $this->arrival;
+        return $this->departure . ' > ' . $this->arrival;
     }
 
     /**

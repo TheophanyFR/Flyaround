@@ -15,7 +15,7 @@ class PlaneModel
     /**
      * @return string
      */
-    public function __toString()
+    public function getModelManufacturer()
     {
         return $this->model . " - " . $this->manufacturer;
     }

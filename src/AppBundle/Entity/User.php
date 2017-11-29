@@ -17,7 +17,7 @@ class User
     /**
      * @return string
      */
-    public function __toString()
+    public function getFullName()
     {
         return $this->firstName . " " . $this->lastName;
     }
