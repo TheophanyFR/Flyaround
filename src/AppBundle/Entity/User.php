@@ -15,6 +15,14 @@ class User
     /* Personnal */
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->firstName . " " . $this->lastName;
+    }
+
+    /**
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Reservation", inversedBy="passengers")
      * @ORM\JoinColumn(nullable=false)
      */

@@ -13,6 +13,14 @@ use Doctrine\ORM\Mapping as ORM;
 class PlaneModel
 {
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->model . " - " . $this->manufacturer;
+    }
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")

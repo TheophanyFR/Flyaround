@@ -13,6 +13,14 @@ use Doctrine\ORM\Mapping as ORM;
 class Flight
 {
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->departure . ' - ' . $this->arrival;
+    }
+
+    /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="flight")
      * @ORM\JoinColumn(nullable=false)
      *
