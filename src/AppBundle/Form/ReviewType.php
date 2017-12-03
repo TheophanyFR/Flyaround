@@ -9,7 +9,11 @@
 namespace AppBundle\Form;
 
 
-class ReviewType
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+
+class ReviewType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -20,7 +24,8 @@ class ReviewType
         $builder
             ->add('text')
             ->add('publicationDate')
-            ->add('note')->add('userRated')
+            ->add('note')
+            ->add('userRated')
             ->add('reviewAuthor');
     }
 
