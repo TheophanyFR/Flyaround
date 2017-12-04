@@ -53,12 +53,6 @@ class Reservation
      */
     private $publicationDate;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="passenger", type="string", length=32)
-     */
-    private $passenger;
 
     /**
      * @var bool
