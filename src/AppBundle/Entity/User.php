@@ -3,14 +3,15 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * User
  *
- * @ORM\Table(name="user")
+ * @ORM\Table(name="`user`")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
-class User
+class User extends BaseUser
 {
     /* Personnal */
 
@@ -59,13 +60,6 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="userName", type="string", length=32)
-     */
-    private $userName;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="firstName", type="string", length=32)
      */
     private $firstName;
@@ -76,13 +70,6 @@ class User
      * @ORM\Column(name="lastName", type="string", length=32)
      */
     private $lastName;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=64)
-     */
-    private $email;
 
     /**
      * @var string
@@ -151,29 +138,7 @@ class User
         return $this->id;
     }
 
-    /**
-     * Set userName
-     *
-     * @param string $userName
-     *
-     * @return User
-     */
-    public function setUserName($userName)
-    {
-        $this->userName = $userName;
 
-        return $this;
-    }
-
-    /**
-     * Get userName
-     *
-     * @return string
-     */
-    public function getUserName()
-    {
-        return $this->userName;
-    }
 
     /**
      * Set firstName
@@ -614,5 +579,29 @@ class User
     public function getUsersRated()
     {
         return $this->usersRated;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     *
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
     }
 }
