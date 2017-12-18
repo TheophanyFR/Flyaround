@@ -81,21 +81,21 @@ class User extends BaseUser
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birthDate", type="date")
+     * @ORM\Column(name="birthDate", type="date", nullable=true)
      */
     private $birthDate;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="creationDate", type="datetime")
+     * @ORM\Column(name="creationDate", type="datetime", nullable=true)
      */
     private $creationDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="role", type="string", length=16)
+     * @ORM\Column(name="role", type="string", length=16, nullable=true)
      */
     private $role;
 
@@ -118,14 +118,14 @@ class User extends BaseUser
      *
      * @ORM\Column(name="isACertifiedPilot", type="boolean")
      */
-    private $isACertifiedPilot;
+    private $isACertifiedPilot = false;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="isActive", type="boolean")
      */
-    private $isActive;
+    private $isActive = false;
 
 
     /**
