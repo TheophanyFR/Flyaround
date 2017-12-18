@@ -16,4 +16,7 @@
 /vendor/
 /web/bundles/
 
-var/
+var/*
+!var/.gitkeep
+
+composer\.lock
